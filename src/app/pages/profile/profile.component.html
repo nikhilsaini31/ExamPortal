@@ -1,0 +1,52 @@
+ <mat-card *ngIf="user">  <!-- if user is not null only then card will show -->
+    <h1 class="text-center">Your Profile Details</h1>
+    <!-- {{user | json}} -->
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="img-container text-center">
+                    <img class="img-main" src="https://static.vecteezy.com/system/resources/previews/002/534/006/original/social-media-chatting-online-blank-profile-picture-head-and-body-icon-people-standing-icon-grey-background-free-vector.jpg" alt="Profile-img">
+                    <h2>{{user.firstname}} {{user.lastname}}</h2>
+                </div>
+
+                <!-- table details -->
+
+                <div class="row">
+                    <div class="col-md-10 offset-1">
+                        
+                        <table class="table-container text-center">
+                            <tr>
+                                <th>USERNAME</th>
+                                <th>{{user.username}}</th>
+                            </tr>
+                            <tr>
+                                <th>USERID</th>
+                                <th>{{user.userId}}</th>
+                            </tr>
+                            <tr>
+                                <th>PHONE</th>
+                                <th>{{user?.phone || '0000000000' }}</th>
+                            </tr>
+                            <tr>
+                                <th>ROLE</th>
+                                <th>{{ user.userRole[0]?.role?.roleName }}</th>
+                            </tr>
+                            <tr>
+                                <th>STATUS</th>
+                                <th>{{user.enabled}}</th>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </mat-card-content>
+
+    <mat-card-actions class="btn-container text-center">
+        <button mat-raised-button color="primary" >UPDATE</button>
+        <button mat-raised-button color="accent" class="ml20">SAHRE</button>
+    </mat-card-actions>
+
+</mat-card>

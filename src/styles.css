@@ -1,1 +1,79 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: #eeeeee;
+}
+
+
+.text-center{
+    text-align: center;
+}
+
+.full-width{
+    width: 100%;
+}
+
+
+
+.pd-all20{
+  padding: 20px !important;
+}
+
+
+/* .col-md-6.offset-md-3 {
+    background-color: #f4f3f3;
+    box-shadow: 0 0 50px rgb(163 163 166);
+} */
+
+.ml20{
+    margin-left: 20px !important;
+}
+
+.mr20{
+    margin-right: 20px !important;
+}
+
+.mt20{
+    margin-top: 20px !important;
+}
+
+.mb20{
+    margin-bottom: 20px !important;
+}
+
+/* ---------------------------------- */
+
+.ml10{
+    margin-left: 10px !important;
+}
+
+.mr10{
+    margin-right: 10px !important;
+}
+
+.mt10{
+    margin-top: 10px !important;
+}
+
+.mb10{
+    margin-bottom: 10px !important;
+}
+
+
+        /* ----------------- */
+
+        
+/* .main-form-container form input{
+
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+} */

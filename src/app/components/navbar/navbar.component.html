@@ -1,0 +1,36 @@
+<mat-toolbar color="accent">
+    <!-- Menu Button -->
+    <a [routerLink]="'/'" mat-icon-button class="example-icon" aria-label="Menu">
+      <mat-icon>menu_book</mat-icon>
+    </a>
+
+    <!-- Title -->
+    <span>ExamPortal</span>
+
+    <!-- Spacer to align items to the right -->
+    <span class="example-spacer"></span>
+
+    <!-- Login Button -->
+    <a *ngIf="!loginservice.isLoggedIn()" [routerLink]="'/login'" mat-button class="example-icon favorite-icon" aria-label="Login">
+      Login
+    </a>
+
+    
+    <!-- Register Button -->
+    <a *ngIf="!loginservice.isLoggedIn()" [routerLink]="'/signup'" mat-button class="example-icon" aria-label="Register">
+      Register
+    </a>
+
+      
+
+    <!-- if login  -->
+
+    <a  (click)="logout()" *ngIf="loginservice.isLoggedIn()"   mat-button class="example-icon favorite-icon" aria-label="Login">
+      Logout
+    </a>
+
+    <button   *ngIf="loginservice.isLoggedIn()" routerLink="/admin/profile"  mat-button class="example-icon favorite-icon" aria-label="Login">
+      {{ username }}
+    </button>
+
+</mat-toolbar>

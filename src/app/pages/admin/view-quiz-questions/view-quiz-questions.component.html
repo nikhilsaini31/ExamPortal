@@ -1,0 +1,57 @@
+<h2 class="text-center mt10">Question of {{title}}</h2>
+
+<div class="container text-center mt20 mb20">
+                                                             <!-- // here qId is quiz id -->
+    <button mat-raised-button [routerLink]="'/admin/add-question/'+qId + '/' +title" color="primary"><mat-icon>add</mat-icon> Add Question </button>
+</div>
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card *ngFor="let q of questions; let i=index">
+                    <mat-card-content>
+                        <p >
+                            <b>Q.{{ i+1 }}</b> <!-- {{q.content}} -->
+                              <span class="ml20" [innerHTML]="q.content"></span> <!-- CKEditor use html so its to convert html to simple text -->
+                        </p>
+                        
+
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <b>(1)</b> {{q.option1}}
+                                </div>
+                                <div class="col-md-6">
+                                    <b>(2)</b> {{q.option2}}
+                                </div>
+                            </div>
+                            <div class="row mt20">
+                                <div class="col-md-6">
+                                    <b>(3)</b> {{q.option3}}
+                                </div>
+                                <div class="col-md-6">
+                                    <b>(4)</b> {{q.option4}}
+                                </div>
+                            </div>
+
+                            <mat-divider class="mt20 mb20"></mat-divider>
+                            <p>
+                                <b>Answer :</b>
+                                {{q.answer}}
+                            </p>
+                        </div>
+
+                        <mat-card-actions>
+                                                                           <!-- .quesID should be same as variable defined in bacekend -->
+                            <button mat-stroked-button [routerLink]="'/admin/question/'+q.quesID" color="accent">Update</button>
+                            <button mat-button class="ml10" (click)="deleteQuestion(q.quesID)" color="accent"><mat-icon>delete</mat-icon></button>
+                            
+                        </mat-card-actions>
+
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

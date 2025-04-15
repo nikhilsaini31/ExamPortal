@@ -1,0 +1,15 @@
+.example-header-image {
+    background-image: url('../../../../assets/questionary.png');
+    background-size: cover;
+  }
+
+  mat-card-actions.mat-mdc-card-actions.mdc-card__actions {
+    flex-wrap: wrap-reverse;
+}
+
+  /* .col-md-12.quiz-container.mt10 {
+    display: grid
+;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+} */

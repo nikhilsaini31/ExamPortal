@@ -1,0 +1,19 @@
+.img-main{
+    max-width: 100px;
+    border: 1px solid #ff4081;
+    border-radius: 50%;
+}
+
+.table-container{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr th{
+    border: 1px solid #e2e2e2;
+    padding: 10px 20px;
+}
+
+.btn-container{
+    margin: auto;
+}
